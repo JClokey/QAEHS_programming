@@ -1,5 +1,5 @@
 """
-I am using this to store useful functions I have made for env sci and cheminformatics
+I am using this to store useful functions for env sci and cheminformatics. JClokey
 """
 
 # Tanimoto or Jaccard indexing is a bitwise method for comparing similarities of two binary strings
