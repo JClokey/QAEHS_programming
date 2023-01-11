@@ -12,10 +12,10 @@ def tanimoto(fp1, fp2):
     fp2 = int(fp2, 2)
 
     # Counts the 1s in each int and the number of pairs
-    fp1_count = bin(fp1).count('1')
-    fp2_count = bin(fp2).count('1')
-    both_count = bin(fp1 & fp2).count('1')
+    fp1_bits = bin(fp1).count('1')
+    fp2_bits = bin(fp2).count('1')
+    common_bits = bin(fp1 & fp2).count('1')
 
     # Computes and returns the tanimoto similarity from 0-1 as a float (1 being 100% similar, 0 being 0% similar) 
-    return float(both_count) / (fp1_count + fp2_count - both_count)
+    return float(common_bits) / (fp1_bits + fp2_bits - common_bits)
 
