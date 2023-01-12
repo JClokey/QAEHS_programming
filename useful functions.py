@@ -19,3 +19,22 @@ def tanimoto(fp1, fp2):
     # Computes and returns the tanimoto similarity from 0-1 as a float (1 being 100% similar, 0 being 0% similar) 
     return float(common_bits) / (fp1_bits + fp2_bits - common_bits)
 
+
+# random binary generator
+# this will create random binaries of any specified length as a string
+# requires the random module to be imported
+
+import random
+
+def rand_binary_gen(bits):
+    binary = ''
+    for i in range(bits):
+        binary += str(random.randint(0,1))
+    return binary
+
+"""
+to create a dictionary of random binaries attached to a random chemical, with leading zeroes:
+binaries = {}
+for i in range(1000):
+    binaries["Imaginary_chemical_{0}".format(str(i).zfill(6))] = rand_binary_gen(1024)
+"""
