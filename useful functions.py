@@ -23,6 +23,7 @@ def tanimoto(fp1, fp2):
 # random binary generator
 # this will create random binaries of any specified length as a string
 # requires the random module to be imported
+# useful for uncertainty quantification of molecular fingerprints
 
 import random
 
